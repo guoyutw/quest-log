@@ -28,6 +28,8 @@ The product direction is closer to an open-world game HUD than a traditional tas
 
 A Quest's possible gain is broader than a finished artifact. It may include a skill, reusable method, money, evidence, understanding, a clearer decision, elimination of a wrong direction, an unlocked option/Quest, or a portable work product. When a gain is inferred rather than demonstrated, it must remain a **hypothesis / possible gain**, not a guaranteed outcome.
 
+Possible gain and earned growth are distinct. A possible gain is a not-yet-proven potential benefit; earned growth requires actual evidence that something was learned, built, retained, or made more transferable. One occurrence may be treated as growth evidence/a candidate. Repetition, transfer across contexts, or retention can increase confidence that the character has genuinely developed the capability. This is a working product distinction only: it does not freeze XP, levels, skill trees, reward taxonomy, or a 0.1 completion gate.
+
 Exploration and research-system work can be valid Quest work when they leave something portable: tested understanding, a reusable method, an artifact, a decision, durable learning, or evidence useful to a later direction. **Allow exploration, but do not let exploration evaporate.**
 
 AI may infer Quest state from evidence, propose Quest decomposition and next actions, and suggest possible gains/unlocks. These are working interpretations that should be revised through actual use; they are not permanent rules. The owner retains direction and trade-off authority, while AI may offer a usable first version before every detail is settled.

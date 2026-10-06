@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quest Log — Web HUD Reference</title>
+  <style>
+    :root{color-scheme:dark;--bg:#11151b;--panel:#1b222b;--panel2:#232d38;--text:#f3efe4;--muted:#9da8b5;--gold:#e5b95c;--teal:#55c6ad;--blue:#8395ae;--purple:#aa8bd4;--red:#e06b68}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#263342 0,#11151b 42%);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Noto Sans TC",sans-serif}button{font:inherit;color:inherit;background:none;border:0} .shell{max-width:1120px;margin:auto;padding:24px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.brand{letter-spacing:.08em;font-weight:800}.eyebrow{color:var(--gold);font-size:.75rem;letter-spacing:.12em}.status{color:var(--teal);font-size:.85rem}.layout{display:grid;grid-template-columns:1fr 1.25fr;gap:18px}.panel{background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid #34404d;border-radius:18px;padding:20px;box-shadow:0 14px 40px #0004}.panel h1,.panel h2{margin:.2em 0 .7em}.quest{width:100%;text-align:left;display:block;padding:16px;margin:10px 0;background:var(--panel2);border:1px solid transparent;border-radius:13px;cursor:pointer}.quest:hover,.quest.active{border-color:var(--gold)}.quest small{display:block;color:var(--muted);margin-top:4px}.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.72rem;margin-right:6px}.active-b{color:#201a0c;background:var(--gold)}.ready-b{color:#081d19;background:var(--teal)}.fog-b{color:#1a1329;background:var(--purple)}.detail{min-height:410px}.row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #34404d;padding:12px 0}.label{color:var(--muted);font-size:.85rem}.value{font-weight:650;text-align:right}.next{color:var(--teal)}.meaning{color:#ded5bd}.bottom{display:none}.note{color:var(--muted);font-size:.85rem;margin-top:22px}@media(max-width:700px){.shell{padding:16px}.top{margin-bottom:14px}.layout{display:block}.map{display:none}.detail{margin-top:14px}.bottom{display:grid;grid-template-columns:repeat(3,1fr);position:sticky;bottom:0;margin:16px -16px -16px;padding:10px 4px;background:#151b22ee;border-top:1px solid #34404d}.bottom button{font-size:.78rem;color:var(--muted)}.bottom button:first-child{color:var(--gold)} }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div><div class="eyebrow">QUEST LOG</div><div class="brand">嚕嚕米的冒險地圖</div></div><div class="status">● 目前可繼續 2</div></header>
+    <section class="layout">
+      <div class="panel quests"><h1>任務</h1><p class="label">現在有哪些主線？現在做什麼？</p>
+        <button class="quest active" data-quest="0"><span class="badge active-b">NOW</span>把工作流程變簡單<span><small>目前階段：收斂做法</small></span></button>
+        <button class="quest" data-quest="1"><span class="badge ready-b">✓</span>整理下一支影片<span><small>目前階段：等待選題</small></span></button>
+        <button class="quest" data-quest="2"><span class="badge fog-b">?</span>探索新的內容方向<span><small>迷霧中的候選路線</small></span></button>
+      </div>
+      <div class="panel map"><div class="eyebrow">MAP</div><h2>世界地圖</h2><p class="label">主線分布在不同的冒險區域</p><div style="height:260px;border:1px dashed #56677b;border-radius:14px;display:grid;place-items:center;color:var(--blue)">◈ 目前探索區<br><small>工作流森林 · 內容高地 · 迷霧邊界</small></div></div>
+      <article class="panel detail"><div class="eyebrow">QUEST DETAIL</div><h2 id="title">把工作流程變簡單</h2><div class="row"><span class="label">目前階段</span><span class="value" id="stage">收斂做法</span></div><div class="row"><span class="label">NOW</span><span class="value" id="now">選一個最小可行的下一步</span></div><div class="row"><span class="label">完成／切換條件</span><span class="value" id="done">做完一次並留下可重用的結果</span></div><div class="row"><span class="label">blocker</span><span class="value" id="blocker">—</span></div><div class="row"><span class="label">NEXT</span><span class="value next" id="next">今天先完成一個小段落</span></div><div class="row"><span class="label">任務的意義</span><span class="value meaning" id="meaning">讓未來少一點重工，多一點真正的創作</span></div><p class="note">Reference presentation only · synthetic demo data · no live Quest connection</p></article>
+    </section>
+    <nav class="bottom"><button>⚔ 任務</button><button>◈ 地圖</button><button>♙ 角色</button></nav>
+  </main>
+<script>
+const quests=[
+ {title:'把工作流程變簡單',stage:'收斂做法',now:'選一個最小可行的下一步',done:'做完一次並留下可重用的結果',blocker:'—',next:'今天先完成一個小段落',meaning:'讓未來少一點重工，多一點真正的創作'},
+ {title:'整理下一支影片',stage:'等待選題',now:'從候選題目選一個開始',done:'選定題目並建立素材卡',blocker:'—',next:'打開候選清單，挑一個最有感的',meaning:'把想法變成可以拍、可以分享的作品'},
+ {title:'探索新的內容方向',stage:'未探索',now:'先收集三個真實案例',done:'留下可回看的比較筆記',blocker:'—',next:'從迷霧邊界挑一條路試走',meaning:'可能解鎖新的表達方式；目前仍是候選'}
+];
+for(const b of document.querySelectorAll('.quest')) b.onclick=()=>{const q=quests[+b.dataset.quest];document.querySelectorAll('.quest').forEach(x=>x.classList.remove('active'));b.classList.add('active');for(const k of ['title','stage','now','done','blocker','next','meaning'])document.getElementById(k).textContent=q[k]};
+</script>
+</body>
+</html>

@@ -12,7 +12,7 @@ After normal work, recover and show: Quests, current stage/state, the actionable
 
 This is conceptual for 0.1, not a permanent architecture freeze. Quest Log is not a manual task manager, percentage engine, autonomous new-Quest generator, or replacement for private runtime stores.
 
-## Working product direction — 2026-09-25
+## Working product direction — 2026-10-07
 
 **Working product direction; not frozen product requirements and not a change to the 0.1 goal.**
 
@@ -41,3 +41,16 @@ The first practical question is not whether the full game layer works. It is whe
 ### Deliberately not frozen
 
 This direction does not freeze main/side Quest categories, red/yellow/green/grey colours, XP, levels, skill trees, a reward taxonomy, a unique Quest granularity rule, a required split depth, an automatic priority engine, or AI choosing which Quest the owner should do. These remain future design candidates to validate, not 0.1 scope expansion or current requirements.
+
+### Current HUD presentation decisions
+
+The owner-approved current Web HUD reference is intentionally an open-world / WoW-like presentation, not a generic dashboard or todo list:
+
+- Desktop is **World Map-first**; mobile is **Objective Tracker-first** and is a primary use context.
+- Mobile navigation uses three entrances: 任務 / 地圖 / 角色. Quest detail is a bottom sheet showing current stage, NOW, completion/switch condition, real blocker only, NEXT, and the Quest's meaning.
+- Chinese carries comprehension. Icons, numbers, and small short-English labels may add visual rhythm, but English is never a prerequisite for understanding.
+- The visual language is **Modern Adventure**: dark neutral base; warm gold for active/tracked; teal for continue; blue-grey for paused; purple for unexplored/fog/candidate; red only for real blocker/danger.
+- No fake XP, level, or progress bar. Profile may show only real status numbers; XP/skill/level require trustworthy earned-growth evidence first.
+- Unconfirmed candidate lines use Fog of War / 迷霧 language and do not become formal Quests automatically.
+
+The sanitized presentation reference is [`web/index.html`](web/index.html). It uses synthetic demo data only. A private authenticated deployment has been owner-verified as a presentation snapshot; it is not the live Quest data path and does not imply any 0.1 finish-line gate passed.

@@ -4,7 +4,7 @@ This is an explicit publication boundary for the 0.1 initialization. The legacy 
 
 | Current material | Public status | Bounded reason / continuation pointer |
 |---|---|---|
-| Current Web HUD | NOT PUBLISHED | No current Web HUD source or verified export was present in the bounded `hermes_lulumi` workspace scope. No private path or guessed URL is recorded. Publish only after locating the owner-approved source and sanitizing it. |
+| Current Web HUD | PUBLIC SANITIZED REFERENCE EXISTS | Owner-approved current Web HUD presentation reference is available at `web/index.html` with synthetic demo data. Live/private deployment and live data path remain inside the private boundary. |
 | Current n8n reconciliation/read workflows | NOT PUBLISHED | The discoverable `portfolio_demos/lead-intake-n8n/` material is a separate lead-intake demo, not Quest Log, and is not represented as the Quest workflow. The Quest n8n export was not present in the bounded scope. |
 | Current Quest-state/source schema | PARTIAL / CONCEPTUAL ONLY | The public product boundary records `Evidence Sources → Reconciler → Quest State → Read API → HUD`, but no authoritative current schema artifact was safely identified. This repo does not invent a competing schema. |
 | Current setup/export instructions | PARTIAL | Product, boundary, lifecycle, and next gate are documented. Runtime-specific setup is not published because its authoritative source and privacy-safe export were not identified. |
@@ -16,4 +16,4 @@ Resolved against local `hermes_lulumi` paths available to this task, excluding c
 
 ## Next continuation action
 
-Locate and owner-approve the current Web HUD source/export first, then produce a separate sanitized artifact review for Web HUD, Quest schema, n8n workflows, and setup. This does not claim any 0.1 gate PASS.
+Complete the Google Sheet/live Quest read path, with a separate privacy-safe review before publication. This does not claim any 0.1 gate PASS.

@@ -10,5 +10,6 @@ This is the public, self-hostable/reference home. Version 0.1 is a shareable ref
 - [Privacy boundary](PRIVACY.md)
 - [Lifecycle](LIFECYCLE.md)
 - [Reference HUD code](src/quest_hud/)
+- [Current Web HUD presentation reference](web/index.html) (sanitized, synthetic demo data)
 
 Run the sanitized reference tests with `python -m pytest src/quest_hud/test_final_xp_zone.py`.

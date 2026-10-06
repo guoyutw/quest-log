@@ -2,7 +2,16 @@
 
 **Status:** 0.1 initialization complete; three finish-line gates remain. Gate 3 has bounded discovery/design progress only and is not complete.
 
-The public anchor and thin reference presentation layer exist. It demonstrates state-to-HUD mapping and narrow intent classification. It is not the live database and does not claim the remaining gates pass.
+The public anchor and current sanitized Web HUD presentation reference exist at `web/index.html`. It demonstrates the owner-approved state-to-HUD presentation with synthetic data only. A private authenticated deployment has been owner-verified as a snapshot; it is not the live database, Google Sheet integration, or completed read path, and does not claim the remaining gates pass.
+
+## Current Web HUD snapshot
+
+- Desktop: World Map-first. Mobile: Objective Tracker-first; bottom entrances are 任務 / 地圖 / 角色.
+- Quest detail: current stage, NOW, completion/switch condition, real blocker only, NEXT, and meaning.
+- Chinese-first comprehension with icon/number/short-English texture; Modern Adventure colours; Fog of War for unconfirmed candidates.
+- No fake XP, level, or progress bar; profile numbers must be real status numbers.
+- This is presentation/deployment progress only. Gate 1, Gate 3, and Quest Log 0.1 remain unpassed.
+- Google Sheet live data and the live Quest read path are not connected.
 
 ## Gate 3 — local n8n migration
 

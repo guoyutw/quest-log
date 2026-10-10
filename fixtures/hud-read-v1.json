@@ -1,0 +1,212 @@
+{
+  "fixture_version": "hud-read-v1-synthetic",
+  "note": "Synthetic only. No live Quest names, ids, timestamps, endpoints, or private data.",
+  "canonical": {
+    "quests": [
+      {
+        "id": "quest-a",
+        "status": "ACTIVE",
+        "updated_at": "T1",
+        "route": {
+          "status": "ACTIVE",
+          "updated_at": "R1"
+        }
+      },
+      {
+        "id": "quest-b",
+        "status": "ACTIVE",
+        "updated_at": "T2",
+        "route": {
+          "status": "ACTIVE",
+          "updated_at": "R2"
+        }
+      },
+      {
+        "id": "quest-c",
+        "status": "READY",
+        "updated_at": "T3",
+        "route": {
+          "status": "PARKED",
+          "updated_at": "R3"
+        }
+      },
+      {
+        "id": "quest-d",
+        "status": "READY",
+        "updated_at": "T4",
+        "route": null
+      },
+      {
+        "id": "quest-e",
+        "status": "ACTIVE",
+        "updated_at": "T5",
+        "route": {
+          "status": "ACTIVE",
+          "updated_at": "R5"
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "id": "candidate-a",
+        "status": "PARKED_CANDIDATE",
+        "updated_at": "C1"
+      },
+      {
+        "id": "candidate-b",
+        "status": "PARKED_CANDIDATE",
+        "updated_at": "C2"
+      },
+      {
+        "id": "candidate-c",
+        "status": "ACTIVE_CANDIDATE",
+        "updated_at": "C3"
+      }
+    ]
+  },
+  "projection": {
+    "contract": "quest-hud-projection-v1",
+    "rows": [
+      {
+        "entity_type": "quest",
+        "entity_id": "quest-a",
+        "display_title": "任務 A",
+        "display_status": "進行中",
+        "display_stage": "階段 A",
+        "display_now": "下一個可做動作 A",
+        "display_blocker": "",
+        "display_next": "下一步 A",
+        "display_meaning": "",
+        "source_state_updated_at": "T1",
+        "source_route_updated_at": "R1",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      },
+      {
+        "entity_type": "quest",
+        "entity_id": "quest-b",
+        "display_title": "任務 B",
+        "display_status": "進行中",
+        "display_stage": "階段 B",
+        "display_now": "下一個可做動作 B",
+        "display_blocker": "",
+        "display_next": "下一步 B",
+        "display_meaning": "有證據支持的短意義",
+        "source_state_updated_at": "T2",
+        "source_route_updated_at": "R2",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      },
+      {
+        "entity_type": "quest",
+        "entity_id": "quest-c",
+        "display_title": "任務 C",
+        "display_status": "暫放",
+        "display_stage": "階段 C",
+        "display_now": "等待條件",
+        "display_blocker": "",
+        "display_next": "下一步 C",
+        "display_meaning": "",
+        "source_state_updated_at": "T3",
+        "source_route_updated_at": "R3",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      },
+      {
+        "entity_type": "quest",
+        "entity_id": "quest-d",
+        "display_title": "任務 D",
+        "display_status": "待續",
+        "display_stage": "階段 D",
+        "display_now": "等待選擇",
+        "display_blocker": "",
+        "display_next": "下一步 D",
+        "display_meaning": "",
+        "source_state_updated_at": "T4",
+        "source_route_updated_at": "",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      },
+      {
+        "entity_type": "quest",
+        "entity_id": "quest-e",
+        "display_title": "任務 E",
+        "display_status": "進行中",
+        "display_stage": "階段 E",
+        "display_now": "下一個可做動作 E",
+        "display_blocker": "",
+        "display_next": "下一步 E",
+        "display_meaning": "",
+        "source_state_updated_at": "T5",
+        "source_route_updated_at": "R5",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      },
+      {
+        "entity_type": "candidate",
+        "entity_id": "candidate-a",
+        "display_title": "候選 A",
+        "display_status": "迷霧候選",
+        "display_stage": "暫放候選",
+        "display_now": "等待新證據",
+        "display_blocker": "",
+        "display_next": "有證據再恢復",
+        "display_meaning": "",
+        "source_state_updated_at": "C1",
+        "source_route_updated_at": "",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      },
+      {
+        "entity_type": "candidate",
+        "entity_id": "candidate-b",
+        "display_title": "候選 B",
+        "display_status": "迷霧候選",
+        "display_stage": "暫放候選",
+        "display_now": "等待新證據",
+        "display_blocker": "",
+        "display_next": "有證據再恢復",
+        "display_meaning": "",
+        "source_state_updated_at": "C2",
+        "source_route_updated_at": "",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      },
+      {
+        "entity_type": "candidate",
+        "entity_id": "candidate-c",
+        "display_title": "候選 C",
+        "display_status": "迷霧候選",
+        "display_stage": "正在探索",
+        "display_now": "持續驗證",
+        "display_blocker": "",
+        "display_next": "找反例",
+        "display_meaning": "仍是候選，不代表正式任務",
+        "source_state_updated_at": "C3",
+        "source_route_updated_at": "",
+        "projection_updated_at": "P1",
+        "projection_contract_version": "quest-hud-projection-v1",
+        "projection_quality": "CURRENT"
+      }
+    ]
+  },
+  "expected": {
+    "valid": true,
+    "formal_quest_count": 5,
+    "candidate_count": 3,
+    "accepts_candidate_statuses": [
+      "PARKED_CANDIDATE",
+      "ACTIVE_CANDIDATE"
+    ],
+    "rejects_unknown_candidate_status": true,
+    "candidate_promotion": false,
+    "clear_condition_source": "ABSENT_IN_V1_DO_NOT_INFER"
+  }
+}

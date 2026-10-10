@@ -9,6 +9,9 @@ This is the public, self-hostable/reference home. Version 0.1 is a shareable ref
 - [Current state](CURRENT_STATE.md)
 - [Privacy boundary](PRIVACY.md)
 - [Lifecycle](LIFECYCLE.md)
+- [HUD runtime contract](docs/hud-runtime-contract.md)
+- [Sanitized current HUD Worker](runtime/quest-log-private-worker.js)
+- [Synthetic HUD read fixture](fixtures/hud-read-v1.json)
 - [Reference HUD code](src/quest_hud/)
 - [Current Web HUD presentation reference](web/index.html) (sanitized, synthetic demo data)
 

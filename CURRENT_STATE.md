@@ -27,7 +27,7 @@ A sanitized reference of the current Worker is published at `runtime/quest-log-p
 - No fake XP, level, or progress bar; profile numbers must be real status numbers.
 - Player projection freshness must exactly match canonical state/selected-route timestamps. Missing, duplicate, unknown, or stale projection data fails closed instead of falling back to raw engineering prose.
 - Candidate identities remain non-formal. Both `PARKED_CANDIDATE` and `ACTIVE_CANDIDATE` are accepted by the current read adapter; neither status promotes a candidate into a formal Quest.
-- The current HUD may visually aggregate candidates into a Fog-of-War camp. This is presentation only; candidate count and identity remain per candidate.
+- The current map visually aggregates candidates into a Fog-of-War camp, while the Objective Tracker shows candidate lines individually so each candidate can expose its own NOW, NEXT, and evidence-bounded meaning. Candidate count and identity remain per candidate.
 - `display_meaning` is optional. It means “why this line is worth continuing now, based on evidence,” not an AI-authored life purpose or guaranteed outcome.
 - The v1 projection does **not** yet contain a durable completion/switch-condition field. The UI must not invent one from NEXT or other fields.
 
